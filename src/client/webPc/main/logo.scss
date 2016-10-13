@@ -1,0 +1,10 @@
+@import "../../common/commonStyle";
+
+.logo {
+    @include flexCenter;
+    width: 250px;
+
+    img {
+        margin: 19px auto;
+    }
+}

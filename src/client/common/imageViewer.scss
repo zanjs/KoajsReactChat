@@ -1,0 +1,50 @@
+@import "./commonStyle";
+
+.image-viewer {
+    @include flexCenter(column);
+    @include containerStart;
+    @include size;
+    @include floatIndex;
+    overflow: hidden;
+
+    & > :nth-child(1000n+1) {
+        @include containerStart;
+        @include size;
+        @include maskColor;
+    }
+
+    & > :nth-child(1000n+2) {
+        position: absolute;
+        max-width: 50%;
+    }
+
+    & > :nth-child(1000n+3) {
+        @include horizontalCenter;
+        @include flexCenter;
+        @include size(180px, 36px);
+        background-color: rgba(0,0,0,0.7);
+        bottom: 100px;
+        border-radius: 18px;
+
+        & > span {
+            @include flexCenter;
+            @include button;
+            margin: {
+                left: 5px;
+                right: 5px;
+            }
+
+            &:first-child {
+                margin-left: 18px;
+            }
+            &:last-child {
+                margin-right: 18px;
+            }
+
+            & > i {
+                font-size: 24px;
+                color: #bdbdbd;
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@import "../../../common/commonStyle";
+
+.group-info {
+    flex: 1;
+    padding: 8px;
+    color: #727272;
+    overflow: auto;
+
+    .content {
+        margin: 10px 0px;
+        span {
+            font-size: 14px;
+
+            &:nth-child(1000n+1) {
+                margin-left: 10px;
+            }
+            &:nth-child(1000n+2) {
+                margin-left: 3px;
+            }
+            &:nth-child(1000n+3) {
+                margin-left: 15px;
+                font-size: 12px;
+                color: #3ba538;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .button {
+        @include flexCenter;
+        width: 100%;
+        flex: 1;
+        margin-bottom: 10px;
+        
+        button {
+            @include size(120px, 30px);
+            border-radius: 5px;
+            color: white;
+            background-color: #0288D1;
+
+            &:hover {
+                background-color: #3ba538;
+            }
+        }
+    }
+
+    .userList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        & > div {
+            @include flexCenter(column);
+            justify-content: flex-start;
+            margin: 3px 0px;
+            max-width: 60px;
+            text-align: center;
+
+            & >:nth-child(1000n+1) {
+                margin: 3px 10px;
+            }
+            span {
+                font-size: 12px;
+                margin: 0px 2px;
+            }
+        }
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.group-info-exit {
+    @include size(100%, 50px);
+    @include flexCenter;
+
+    & > button {
+        @include size(100px, 36px);
+        background-color: #f44336;
+        color: white;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #b71c1c;
+        }
+    }
+}

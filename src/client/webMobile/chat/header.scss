@@ -1,0 +1,20 @@
+@import "../../common/commonStyle";
+
+.chat-header {
+    @include size(100%, 50px);
+    @include flexCenter;
+    min-height: 50px;
+    background-color: $lightGreen5;
+
+    & > span {
+        color: white;
+        font-size: 22px;
+    }
+
+    .back {
+        position: absolute;
+        left: 5px;
+        color: white;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,82 @@
+@import "../../../common/commonStyle";
+
+.expression {
+    @include size(400px, 234px);
+    @include horizontalCenter;
+    @include floatIndex;
+    background-color: white;
+    bottom: 45px;
+    box-shadow: 0px 0px 10px #999;
+
+    .default-expression {
+        @include size(100%, 200px);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        & > div {
+            @include size(40px, 40px);
+            padding: 5px;
+
+            & > div {
+                @include size(30px, 30px);
+                background-repeat: no-repeat;
+                background-image: url('http://assets.suisuijiang.com/expressions.png');
+            }
+        }
+    }
+    .collect-expression {
+        @include size(100%, 200px);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        & > div {
+            @include size(98px, 100px);
+            padding: 2px;
+            position: relative;
+
+            & > i {
+                position: absolute;
+                right: 2px;
+                top: 2px;
+                font-size: 20px;
+                color: #999;
+                cursor: pointer;
+
+                &:hover {
+                    color: #c02721;
+                }
+            }
+
+            & > div {
+                @include size;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+    & > div:last-child {
+        @include size(100%, 34px);
+        background-color: #eee;
+        display: flex;
+        flex-direction: row;
+        padding: 0px 17px;
+        border-top: 1px solid #ddd;
+
+        & > div {
+            @include size;
+            @include flexCenter;
+            cursor: pointer;
+        }
+        .selected {
+            background-color: #fff;
+            position: relative;
+            top: -1px;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+    }
+}

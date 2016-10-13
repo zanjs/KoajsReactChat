@@ -1,0 +1,101 @@
+@import "../../common/commonStyle";
+
+.system-setting {
+    @include floatIndex;
+    @include containerCenter;
+    @include size(300px, 231px);
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+
+    & > :nth-child(1000n+1) {
+        @include flexCenter;
+        background-color: #ffffff;
+        height: 50px;
+        
+        border-top-right-radius: 5px;
+        position: relative;
+
+        & > i {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 20px;
+            color: #999;
+            cursor: pointer;
+
+            &:hover {
+                color: #c02721;
+            }
+        }
+    }
+
+    & > :nth-child(1000n+2) {
+        flex: 1;
+        background-color: #fafafc;
+        
+        border-bottom-right-radius: 5px;
+        padding: 10px 0px;
+
+        .switch {
+            @include flexCenter;
+            padding: 10px 20px;
+            justify-content: space-between;
+
+            & > div {
+                @include size(40px, 14px);
+                @include flexCenter;
+                background-color: #e8e8e8;
+                border: 1px solid #bdbdbd;
+                border-radius: 7px;
+                cursor: pointer;
+
+                & > div {
+                    @include size(24px, 24px);
+                    border-radius: 50%;
+                    position: relative;
+
+                    
+                }
+                .on {
+                    left: -10px;
+                    background-color: lawngreen;
+                }
+                .off {
+                    right: -15px;
+                    background-color: orangered;
+                }
+            }
+        }
+
+        .button {
+            @include flexCenter;
+            margin: 0px 20px;
+            background-color: $lightGreen4;
+            color: white;
+            height: 35px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+
+            & > i {
+                font-size: 20px;
+            }
+            & > span {
+                margin-left: 15px;
+            }
+        }
+
+        // 图片偏下, 上移2像素
+        & > :nth-child(1000n+3) > i {
+            position: relative;
+            top: -2px;
+        }
+
+        & > :nth-child(1000n+4) {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+    }
+}

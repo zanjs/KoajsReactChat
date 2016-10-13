@@ -1,0 +1,35 @@
+@import "../../../common/commonStyle";
+
+.group-notice {
+    flex: 1;
+    padding: 15px;
+
+    & > div:first-child {
+        font-size: 12px;
+        color: #727272;
+    }
+    .content {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #212121;
+    }
+    .editor {
+        @include size(295px, 150px);
+        margin-top: 10px;
+        font-size: 14px;
+        padding: 5px;
+    }
+    .button {
+        @include flexCenter;
+        margin-top: 15px;
+
+        button {
+            @include size(100px, 30px);
+            background-color: #399e3d;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}

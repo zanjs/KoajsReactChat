@@ -1,0 +1,11 @@
+@import "./commonStyle";
+
+.avatar-text {
+    @include flexCenter;
+    border-radius: 50%;
+    color: white;
+}
+
+.avatar-image {
+    border-radius: 50%;
+}

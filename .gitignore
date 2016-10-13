@@ -1,0 +1,33 @@
+# visual studio code
+.DS_Store
+.vscode
+
+# node.js
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Optional npm cache directory
+.npm
+
+# config file
+config.js
+
+# public
+public/*.js
+public/*.map
+
+# server api test
+client.test.js
+
+# eslint cache
+.eslintcache
+
+# message images
+public/images/message

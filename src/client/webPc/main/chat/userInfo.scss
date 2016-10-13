@@ -1,0 +1,85 @@
+@import "../../../common/commonStyle";
+
+.user-info {
+    @include containerCenter;
+    @include floatIndex;
+    @include size(300px, 200px);
+    background-color: $grey1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+
+    & > :nth-child(1000n+1) {
+        @include flexCenter;
+        background-color: white;
+        height: 50px;
+        
+        border-top-right-radius: 5px;
+        position: relative;
+
+        & > i {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 20px;
+            color: #999;
+            cursor: pointer;
+
+            &:hover {
+                color: #c02721;
+            }
+        }
+    }
+
+    & > :nth-child(1000n+2) {
+        flex: 1;
+        background-color: #fafafc;
+        
+        border-bottom-right-radius: 5px;
+        padding: 10px;
+
+        & > :nth-child(1000n+1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+                
+                & > span {
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            & > :nth-child(1000n+2) {
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+            input {
+                display: none;
+            }
+        }
+
+        & > :nth-child(1000n+2) {
+            @include flexCenter;
+            width: 100%;
+            margin-top: 20px;
+
+            & > button {
+                @include size(120px, 30px);
+                border-radius: 5px;
+                color: white;
+                background-color: #0288D1;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #3ba538;
+                }
+            }
+        }
+    }
+}

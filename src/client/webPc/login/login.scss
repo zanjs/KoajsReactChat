@@ -1,0 +1,104 @@
+@import "../../common/commonStyle";
+
+.login {
+    @include size;
+    @include flexCenter;
+
+    & > div {
+        @include flexCenter(row);
+        @include size(460px, auto);
+        background-color: rgba($grey0, 0.95);
+        padding: 20px 30px 30px 30px;
+
+        & > div:nth-child(1000n+1) {
+            & > :nth-child(1000n+1) {
+                margin-right: 30px;
+            }
+        }
+
+        & > div:nth-child(1000n+2) {
+            @include flexCenter(column);g
+
+            & > :nth-child(1000n+1) {
+                color: $grey6;
+                margin: {
+                    top: 20px;
+                    bottom: 10px;
+                }
+                height: 18px;
+            }
+            & > :nth-child(1000n+2) {
+                margin-bottom: 10px;
+            }
+            & > :nth-child(1000n+4) {
+                @include flexCenter;
+                align-self: flex-end;
+                margin-top: 10px;
+
+                button {
+                    background-color: $lightGreen5;
+                    width: 100px;
+                    height: 40px;
+                    color: #fff;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $lightGreen7;
+                    }
+                    &:focus {
+                        border: 1px solid $lightGreen7;
+                        box-shadow: 0px 0px 3px $lightGreen7;
+                    }
+                }
+
+                span {
+                    color: $lightGreen5;
+                    cursor: pointer;
+                    font-size: 16px;
+                    margin-right: 20px;
+                    user-select: none;
+
+                    &:hover {
+                        color: $lightGreen7;
+                    }
+                }
+            }
+            .input {
+                @include size(250px, 36px);
+                @include flexCenter;
+                box-sizing: content-box;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+
+                & > div {
+                    @include flexCenter;
+                    @include size(36px, 36px);
+
+                    i {
+                        color: $grey6;
+                        font-size: 20px;
+                    }
+                }
+                & > input {
+                    flex: 1;
+                    height: 36px;
+                    padding-right: 10px;
+                    font-size: 16px;
+                    color: $grey6;
+                    border-radius: 5px;
+                    background-color: rgba(0, 0, 0, 0);
+                }
+            }
+            .focus {
+                border: 1px solid $lightGreen5;
+                box-shadow: 0px 0px 3px $lightGreen5;
+            }
+            .error {
+                border: 1px solid red;
+                box-shadow: 0px 0px 3px red;
+            }
+        }
+    }
+}

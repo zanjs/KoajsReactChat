@@ -1,0 +1,37 @@
+@import "../../common/commonStyle";
+
+.float-panel {
+    @include size(325px, 100%);
+    @include floatIndex;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: #f1f1f1;
+    box-shadow: -5px 0px 15px -2px #aaa;
+    display: flex;
+    flex-direction: column;
+
+    & > div:first-child {
+        @include size(100%, 60px);
+        @include flexCenter;
+        border-bottom: 1px solid silver;
+        position: relative;
+
+        & > span {
+            color: #231815;
+            font-size: 16px;
+        }
+        & > i {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 20px;
+            color: #999;
+            cursor: pointer;
+
+            &:hover {
+                color: #c02721;
+            }
+        }
+    }
+}

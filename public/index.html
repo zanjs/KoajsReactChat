@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>Chat</title>
+<meta name="keywords" content="node.js, web chat application, 聊天室, 前端开发" />
+<meta name="description" content="online web chat application">
+<meta name="author" content="Julian">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="shortcut icon" type="image/png" href="http://github.panli.com/img/favicon.png"/>
+<link href="/monokai-sublime.min.css" rel="stylesheet">
+</head>
+<body>
+	<div id="app"></div>
+	<script>
+		var body = document.getElementsByTagName('body')[0];
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+		if (/android|iphone/i.test(navigator.userAgent)) {
+			script.src = '/app.mobile.js';
+		}
+		else {
+			script.src = '/app.js';
+		}
+		body.appendChild(script);
+	</script>
+</body>
+</html>
