@@ -1,5 +1,7 @@
 # KoajsReactChat
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/zanjs/KoajsReactChat.svg)](https://greenkeeper.io/)
+
 KoajsReactChat is a web chat application. Made by node.js, koa, react.
 
 
